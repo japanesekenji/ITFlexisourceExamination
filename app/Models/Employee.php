@@ -12,3 +12,7 @@ class Employee extends Model
         'name', 'company'
     ];
 }
+
+public function Company(){
+    return $this->belongsTo('App\Models\Company');
+}

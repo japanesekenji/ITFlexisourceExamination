@@ -70,7 +70,14 @@
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Company</label>
                         <div class="col-sm-12">
-                            <textarea id="company" name="company" required="" placeholder="Enter Company" class="form-control"></textarea>
+                           <!-- <textarea id="company" name="company" required="" placeholder="Enter Company" class="form-control"></textarea>
+                        -->
+                            <select name="company" id="company" class="selectpicker" data-style="select-with-transition" title="Select Company" data-size="7">
+                                
+                                @foreach ($companyname_array as $data)                                       
+                                <option value="{{ $data->name }}"  >{{ $data->name }}</option>                                                      
+                                @endforeach
+                            </select>
                         </div>
                     </div>
                     
